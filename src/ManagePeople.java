@@ -9,23 +9,51 @@ import java.util.ArrayList;
 		Person p3 = new Person ("Joe", 21, "Unemployed", false); 
 		Person p4 = new Person ("John", 89, "Retires", false);
 		
-		public void registerPerson()
+		public void initialPeople()
 		{
-			p1.getString();
-			p2.getString();
-	
-			 
-	
-	
 			arrayPerson.add(p1);
 			arrayPerson.add(p2);
 			arrayPerson.add(p3);
 			arrayPerson.add(p4);
-	
-			for (Person eachPerson: arrayPerson)
+		}
+		
+		
+		public void registerPerson(String name, int age, String jobTitle, boolean gender)
+		{
+			arrayPerson.add(new Person(name, age, jobTitle, gender));
+		}
+		
+		public void printPeople()
+		{
+			for (Person eachPerson : arrayPerson)
 			{
-				eachPerson.getString();
+				System.out.println(eachPerson);
 			}
 		}
+		
+		public String searchName(String type)
+		{
+			for(Person eachPerson : arrayPerson)
+			{
+				if(eachPerson.getName() == type)
+				{
+					return eachPerson.toString(); 
+				}
+			}
+			return "There is nobody called " + type;
+		}
+		
+		public String searchAge(int num)
+		{
+			for (Person eachPerson : arrayPerson)
+			{
+				if(eachPerson.getAge() == num)
+				{
+					return eachPerson.toString();
+				}
+			}
+			return "There is nobody called " + num;  
+		}
+		
 	
 }

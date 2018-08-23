@@ -16,15 +16,15 @@ public class Person {
 		this.gender = gender;
 	}
 	
-	public void getString()
+	public String toString()
 	{
 		if (gender)
 		{ 
-			System.out.println("Name: " + name + ", Age: " + age + ", Job Title: " + jobTitle + ", Gender= Female");
+			return ("Name: " + name + ", Age: " + age + ", Job Title: " + jobTitle + ", Gender= Female");
 		}
 		else 
 		{
-			System.out.println("Name: " + name + ", Age: " + age + ", Job Title: " + jobTitle + ", Gender: = Male");
+			return ("Name: " + name + ", Age: " + age + ", Job Title: " + jobTitle + ", Gender: = Male");
 		}
 	}
 	
